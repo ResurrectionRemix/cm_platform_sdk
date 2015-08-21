@@ -16,8 +16,6 @@
 
 package cyanogenmod.hardware;
 
-import cyanogenmod.hardware.DisplayMode;
-
 /** @hide */
 interface ICMHardwareService {
 
@@ -42,9 +40,4 @@ interface ICMHardwareService {
     String getSerialNumber();
 
     boolean requireAdaptiveBacklightForSunlightEnhancement();
-
-    DisplayMode[] getDisplayModes();
-    DisplayMode getCurrentDisplayMode();
-    DisplayMode getDefaultDisplayMode();
-    boolean setDisplayMode(in DisplayMode mode);
 }
