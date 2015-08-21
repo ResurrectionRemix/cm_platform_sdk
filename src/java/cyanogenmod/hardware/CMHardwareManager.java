@@ -107,7 +107,7 @@ public final class CMHardwareManager {
         FEATURE_KEY_DISABLE,
         FEATURE_SUNLIGHT_ENHANCEMENT,
         FEATURE_TAP_TO_WAKE,
-        FEATURE_TOUCH_HOVERING,
+        FEATURE_TOUCH_HOVERING
     );
 
     private static CMHardwareManager sCMHardwareManagerInstance;
