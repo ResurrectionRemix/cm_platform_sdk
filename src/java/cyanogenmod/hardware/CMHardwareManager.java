@@ -578,9 +578,9 @@ public final class CMHardwareManager {
     /**
      * @return true if setting the mode was successful
      */
-    public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
+    public boolean setDisplayMode(DisplayMode mode) {
         try {
-            return getService().setDisplayMode(mode, makeDefault);
+            return getService().setDisplayMode(mode);
         } catch (RemoteException e) {
         }
         return false;

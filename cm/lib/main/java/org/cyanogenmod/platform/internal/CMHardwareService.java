@@ -78,7 +78,7 @@ public class CMHardwareService extends SystemService {
         public DisplayMode[] getDisplayModes();
         public DisplayMode getCurrentDisplayMode();
         public DisplayMode getDefaultDisplayMode();
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault);
+        public boolean setDisplayMode(DisplayMode mode);
     }
 
     private class LegacyCMHardware implements CMHardwareInterface {
@@ -290,8 +290,8 @@ public class CMHardwareService extends SystemService {
             return DisplayModeControl.getDefaultMode();
         }
 
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
-            return DisplayModeControl.setMode(mode, makeDefault);
+        public boolean setDisplayMode(DisplayMode mode) {
+            return DisplayModeControl.setMode(mode, true);
         }
     }
 
@@ -515,14 +515,14 @@ public class CMHardwareService extends SystemService {
         }
 
         @Override
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
+        public boolean setDisplayMode(DisplayMode mode) {
             mContext.enforceCallingOrSelfPermission(
                     cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
                 Log.e(TAG, "Display modes are not supported");
                 return false;
             }
-            return mCmHwImpl.setDisplayMode(mode, makeDefault);
+            return mCmHwImpl.setDisplayMode(mode);
         }
     };
 }

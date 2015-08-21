@@ -46,5 +46,5 @@ interface ICMHardwareService {
     DisplayMode[] getDisplayModes();
     DisplayMode getCurrentDisplayMode();
     DisplayMode getDefaultDisplayMode();
-    boolean setDisplayMode(in DisplayMode mode, boolean makeDefault);
+    boolean setDisplayMode(in DisplayMode mode);
 }
