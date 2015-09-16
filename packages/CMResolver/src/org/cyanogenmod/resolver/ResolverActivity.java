@@ -525,8 +525,11 @@ public class ResolverActivity extends Activity implements AdapterView.OnItemClic
             mPackageMonitor.register(this, getMainLooper(), false);
             mRegistered = true;
         }
-        mAdapter.handlePackagesChanged();
-        mSuggestAdapter.handlePackagesChanged();
+        if (mHasSuggestions) {
+            mSuggestAdapter.handlePackagesChanged();
+        } else {
+            mAdapter.handlePackagesChanged();
+        }
         if (mProfileView != null) {
             bindProfileView();
         }
@@ -575,8 +578,7 @@ public class ResolverActivity extends Activity implements AdapterView.OnItemClic
             // Header views don't count.
             return;
         }
-        ListAdapter d = mListView.getAdapter();
-        if (d == mAdapter) {
+        if (mAdapter.getCount() > 0 && !mUsingSuggestions) {
             ResolveInfo resolveInfo = mAdapter.resolveInfoForPosition(position, true);
             if (mResolvingHome && hasManagedProfile()
                     && !supportsManagedProfiles(resolveInfo)) {
