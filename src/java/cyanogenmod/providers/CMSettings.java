@@ -1745,6 +1745,19 @@ public final class CMSettings {
                 };
 
         /**
+         * Whether we automatically generate notification LED colors or just
+         * use the boring default.
+         *
+         * @hide
+         */
+        public static final String NOTIFICATION_LIGHT_COLOR_AUTO =
+                "notification_light_color_auto";
+
+        /** @hide */
+        public static final Validator NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -1992,6 +2005,8 @@ public final class CMSettings {
             VALIDATORS.put(HEADS_UP_CUSTOM_VALUES, HEADS_UP_CUSTOM_VALUES_VALIDATOR);
             VALIDATORS.put(HEADS_UP_BLACKLIST_VALUES, HEADS_UP_BLACKLIST_VALUES_VALIDATOR);
             VALIDATORS.put(HEADS_UP_WHITELIST_VALUES, HEADS_UP_WHITELIST_VALUES_VALIDATOR);
+            VALIDATORS.put(NOTIFICATION_LIGHT_COLOR_AUTO,
+                    NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
