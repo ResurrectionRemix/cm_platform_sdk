@@ -67,6 +67,7 @@ public class QSConstants {
     public static final String DYNAMIC_TILE_ADB = "adb";
 
     protected static final ArrayList<String> STATIC_TILES_AVAILABLE = new ArrayList<String>();
+    protected static final ArrayList<String> DYNAMIC_TILES_AVAILBLE = new ArrayList<String>();
     protected static final ArrayList<String> TILES_AVAILABLE = new ArrayList<String>();
 
     static {
@@ -111,5 +112,10 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_REBOOT);
 
         TILES_AVAILABLE.addAll(STATIC_TILES_AVAILABLE);
+
+        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_ADB);
+        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_IME_SELECTOR);
+        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_NEXT_ALARM);
+        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_SU);
     }
 }
