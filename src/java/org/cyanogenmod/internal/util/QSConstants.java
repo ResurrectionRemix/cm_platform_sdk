@@ -60,7 +60,8 @@ public class QSConstants {
     public static final String TILE_EXPANDED_DESKTOP = "expanded_desktop";
     public static final String TILE_MUSIC = "music";
     public static final String TILE_REBOOT = "reboot";
-    public static final String TILE_CONFIGURATIONS = "configurations";	
+    public static final String TILE_CONFIGURATIONS = "configurations";	 
+    public static final String TILE_THEMES = "themes";				
 
     public static final String DYNAMIC_TILE_NEXT_ALARM = "next_alarm";
     public static final String DYNAMIC_TILE_IME_SELECTOR = "ime_selector";
@@ -95,13 +96,13 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_NFC);
         STATIC_TILES_AVAILABLE.add(TILE_COMPASS);
         STATIC_TILES_AVAILABLE.add(TILE_LOCKSCREEN);
-//        STATIC_TILES_AVAILABLE.add(TILE_LTE);
+        STATIC_TILES_AVAILABLE.add(TILE_LTE);
 //        STATIC_TILES_AVAILABLE.add(TILE_VISUALIZER);
         STATIC_TILES_AVAILABLE.add(TILE_VOLUME);
         STATIC_TILES_AVAILABLE.add(TILE_SCREEN_TIMEOUT);
         STATIC_TILES_AVAILABLE.add(TILE_LIVE_DISPLAY);
         STATIC_TILES_AVAILABLE.add(TILE_USB_TETHER);
-//        STATIC_TILES_AVAILABLE.add(TILE_HEADS_UP);
+        STATIC_TILES_AVAILABLE.add(TILE_HEADS_UP);
         STATIC_TILES_AVAILABLE.add(TILE_AMBIENT_DISPLAY);
         STATIC_TILES_AVAILABLE.add(TILE_SYNC);
 //        STATIC_TILES_AVAILABLE.add(TILE_BATTERY_SAVER);
@@ -112,6 +113,7 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_MUSIC);
         STATIC_TILES_AVAILABLE.add(TILE_REBOOT);
 	STATIC_TILES_AVAILABLE.add(TILE_CONFIGURATIONS);
+	STATIC_TILES_AVAILABLE.add(TILE_THEMES);
 
 
         TILES_AVAILABLE.addAll(STATIC_TILES_AVAILABLE);
