@@ -61,8 +61,12 @@ public class QSConstants {
     public static final String TILE_MUSIC = "music";
     public static final String TILE_REBOOT = "reboot";
     public static final String TILE_CONFIGURATIONS = "configurations";	 
-    public static final String TILE_THEMES = "themes";				
-
+    public static final String TILE_THEMES = "themes";			
+    public static final String TILE_NAVBAR = "navbar";	
+    public static final String TILE_PIE = "pie";	
+    public static final String TILE_APPCIRCLEBAR = "appcirclebar";				
+    public static final String TILE_KERNEL= "kernel_adiutor";	
+    public static final String TILE_SCREENRECORD= "screenrecord";	
     public static final String DYNAMIC_TILE_NEXT_ALARM = "next_alarm";
     public static final String DYNAMIC_TILE_IME_SELECTOR = "ime_selector";
     public static final String DYNAMIC_TILE_SU = "su";
@@ -114,6 +118,11 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_REBOOT);
 	STATIC_TILES_AVAILABLE.add(TILE_CONFIGURATIONS);
 	STATIC_TILES_AVAILABLE.add(TILE_THEMES);
+	STATIC_TILES_AVAILABLE.add(TILE_NAVBAR);
+	STATIC_TILES_AVAILABLE.add(TILE_PIE);
+	STATIC_TILES_AVAILABLE.add(TILE_APPCIRCLEBAR);
+	STATIC_TILES_AVAILABLE.add(TILE_KERNEL);
+	STATIC_TILES_AVAILABLE.add(TILE_SCREENRECORD);
 
 
         TILES_AVAILABLE.addAll(STATIC_TILES_AVAILABLE);
