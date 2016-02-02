@@ -70,6 +70,7 @@ public class QSConstants {
     public static final String TILE_GESTUREANYWHERE = "gesture_anywhere";
     public static final String TILE_POWER = "power_menu";						
     public static final String TILE_KERNEL= "kernel_adiutor";	
+    public static final String TILE_SELINUX= "selinux";	
     public static final String TILE_SCREENRECORD= "screenrecord";	
     public static final String DYNAMIC_TILE_NEXT_ALARM = "next_alarm";
     public static final String DYNAMIC_TILE_IME_SELECTOR = "ime_selector";
@@ -129,6 +130,7 @@ public class QSConstants {
 	STATIC_TILES_AVAILABLE.add(TILE_RESTARTUI);
 	STATIC_TILES_AVAILABLE.add(TILE_POWER);
 	STATIC_TILES_AVAILABLE.add(TILE_KERNEL);
+        STATIC_TILES_AVAILABLE.add(TILE_SELINUX);
 	STATIC_TILES_AVAILABLE.add(TILE_SCREENRECORD);
 	STATIC_TILES_AVAILABLE.add(TILE_GESTUREANYWHERE);
         STATIC_TILES_AVAILABLE.add(TILE_BATTERY_SAVER);
