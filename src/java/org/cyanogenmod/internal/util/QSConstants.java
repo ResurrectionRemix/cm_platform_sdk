@@ -75,7 +75,7 @@ public class QSConstants {
     public static final String TILE_SOUND = "sound";
     public static final String DYNAMIC_TILE_NEXT_ALARM = "next_alarm";
     public static final String DYNAMIC_TILE_IME_SELECTOR = "ime_selector";
-//    public static final String DYNAMIC_TILE_SU = "su";
+    public static final String DYNAMIC_TILE_SU = "su";
     public static final String DYNAMIC_TILE_ADB = "adb";
 
     protected static final ArrayList<String> STATIC_TILES_AVAILABLE = new ArrayList<String>();
@@ -141,6 +141,6 @@ public class QSConstants {
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_ADB);
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_IME_SELECTOR);
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_NEXT_ALARM);
-//        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_SU);
+        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_SU);
     }
 }
