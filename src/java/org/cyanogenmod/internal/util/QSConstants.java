@@ -67,18 +67,15 @@ public class QSConstants {
     public static final String TILE_HWKEYS = "hw_keys";	
     public static final String TILE_APP_PICKER = "app_picker";
     public static final String TILE_PIE = "pie";	
-    public static final String TILE_RESTARTUI = "restartui";
     public static final String TILE_GESTUREANYWHERE = "gesture_anywhere";
     public static final String TILE_POWER = "power_menu";		
     public static final String TILE_APP_KILL = "kill_app";					
-    public static final String TILE_APPCIRCLEBAR = "appcirclebar";				
     public static final String TILE_KERNEL= "kernel_adiutor";	
-    public static final String TILE_SELINUX= "selinux";	
     public static final String TILE_SCREENRECORD= "screenrecord";	
     public static final String TILE_SOUND = "sound";
     public static final String DYNAMIC_TILE_NEXT_ALARM = "next_alarm";
     public static final String DYNAMIC_TILE_IME_SELECTOR = "ime_selector";
-    public static final String DYNAMIC_TILE_SU = "su";
+//    public static final String DYNAMIC_TILE_SU = "su";
     public static final String DYNAMIC_TILE_ADB = "adb";
 
     protected static final ArrayList<String> STATIC_TILES_AVAILABLE = new ArrayList<String>();
@@ -118,7 +115,6 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_HEADS_UP);
         STATIC_TILES_AVAILABLE.add(TILE_AMBIENT_DISPLAY);
         STATIC_TILES_AVAILABLE.add(TILE_SYNC);
-//        STATIC_TILES_AVAILABLE.add(TILE_BATTERY_SAVER);
         STATIC_TILES_AVAILABLE.add(TILE_BRIGHTNESS);
         STATIC_TILES_AVAILABLE.add(TILE_SCREEN_OFF);
         STATIC_TILES_AVAILABLE.add(TILE_SCREENSHOT);
@@ -128,15 +124,12 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_CONFIGURATIONS);
         STATIC_TILES_AVAILABLE.add(TILE_THEMES);
         STATIC_TILES_AVAILABLE.add(TILE_NAVBAR);
-	STATIC_TILES_AVAILABLE.add(TILE_HWKEYS);
+        STATIC_TILES_AVAILABLE.add(TILE_HWKEYS);
         STATIC_TILES_AVAILABLE.add(TILE_APP_PICKER);
         STATIC_TILES_AVAILABLE.add(TILE_APP_KILL);
         STATIC_TILES_AVAILABLE.add(TILE_PIE);
-        STATIC_TILES_AVAILABLE.add(TILE_APPCIRCLEBAR);
-        STATIC_TILES_AVAILABLE.add(TILE_RESTARTUI);
         STATIC_TILES_AVAILABLE.add(TILE_POWER);
         STATIC_TILES_AVAILABLE.add(TILE_KERNEL);
-        STATIC_TILES_AVAILABLE.add(TILE_SELINUX);
         STATIC_TILES_AVAILABLE.add(TILE_SCREENRECORD);
         STATIC_TILES_AVAILABLE.add(TILE_GESTUREANYWHERE);
         STATIC_TILES_AVAILABLE.add(TILE_BATTERY_SAVER);
@@ -148,6 +141,6 @@ public class QSConstants {
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_ADB);
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_IME_SELECTOR);
         DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_NEXT_ALARM);
-        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_SU);
+//        DYNAMIC_TILES_AVAILBLE.add(DYNAMIC_TILE_SU);
     }
 }
