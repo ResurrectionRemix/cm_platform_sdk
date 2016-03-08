@@ -2679,6 +2679,13 @@ public final class CMSettings {
         public static final String LIVE_LOCK_SCREEN_ENABLED = "live_lock_screen_enabled";
 
         /**
+         * The user selected Live lock screen to display
+         * @hide
+         */
+        public static final String DEFAULT_LIVE_LOCK_SCREEN_COMPONENT =
+                "default_live_lock_screen_component";
+                
+       /**        
          * Whether touch hovering is enabled on supported hardware
          * @hide
          */
