@@ -58,6 +58,7 @@ public class QSConstants {
     public static final String TILE_BRIGHTNESS = "brightness";
     public static final String TILE_SCREEN_OFF = "screen_off";
     public static final String TILE_SCREENSHOT = "screenshot";
+    public static final String TILE_APPCIRCLEBAR = "appcirclebar";
     public static final String TILE_EXPANDED_DESKTOP = "expanded_desktop";
     public static final String TILE_MUSIC = "music";
     public static final String TILE_REBOOT = "reboot";
@@ -113,6 +114,7 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_LIVE_DISPLAY);
         STATIC_TILES_AVAILABLE.add(TILE_USB_TETHER);
         STATIC_TILES_AVAILABLE.add(TILE_HEADS_UP);
+        STATIC_TILES_AVAILABLE.add(TILE_APPCIRCLEBAR);
         STATIC_TILES_AVAILABLE.add(TILE_AMBIENT_DISPLAY);
         STATIC_TILES_AVAILABLE.add(TILE_SYNC);
         STATIC_TILES_AVAILABLE.add(TILE_BRIGHTNESS);
