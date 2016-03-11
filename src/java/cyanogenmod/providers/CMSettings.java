@@ -2678,6 +2678,12 @@ public final class CMSettings {
          */
         public static final String LIVE_LOCK_SCREEN_ENABLED = "live_lock_screen_enabled";
 
+        /**
+         * Whether touch hovering is enabled on supported hardware
+         * @hide
+         */
+        public static final String FEATURE_TOUCH_HOVERING = "feature_touch_hovering";
+
         // endregion
 
         /**
