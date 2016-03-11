@@ -1772,6 +1772,12 @@ public final class CMSettings {
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR =
                 sBooleanValidator;
+                
+                
+        /**
+         * Whether or not to launch default music player when headset is connected
+         */
+        public static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
 
         /**
          * Whether or not to vibrate when a touchscreen gesture is detected
