@@ -760,6 +760,7 @@ package cyanogenmod.providers {
     method public static boolean putInt(android.content.ContentResolver, java.lang.String, int);
     method public static boolean putLong(android.content.ContentResolver, java.lang.String, long);
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
+    field public static final java.lang.String APP_SWITCH_SWAP_BUTTONS = "app_switch_swap_buttons";
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_global_version";
   }
