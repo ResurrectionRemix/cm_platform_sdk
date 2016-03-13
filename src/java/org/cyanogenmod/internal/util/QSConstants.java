@@ -67,7 +67,6 @@ public class QSConstants {
     public static final String TILE_NAVBAR = "navbar";	
     public static final String TILE_HWKEYS = "hw_keys";	
     public static final String TILE_APP_PICKER = "app_picker";
-    public static final String TILE_PIE = "pie";	
     public static final String TILE_GESTUREANYWHERE = "gesture_anywhere";
     public static final String TILE_POWER = "power_menu";		
     public static final String TILE_APP_KILL = "kill_app";					
@@ -129,7 +128,6 @@ public class QSConstants {
         STATIC_TILES_AVAILABLE.add(TILE_HWKEYS);
         STATIC_TILES_AVAILABLE.add(TILE_APP_PICKER);
         STATIC_TILES_AVAILABLE.add(TILE_APP_KILL);
-        STATIC_TILES_AVAILABLE.add(TILE_PIE);
         STATIC_TILES_AVAILABLE.add(TILE_POWER);
         STATIC_TILES_AVAILABLE.add(TILE_KERNEL);
         STATIC_TILES_AVAILABLE.add(TILE_SCREENRECORD);
