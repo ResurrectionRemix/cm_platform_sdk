@@ -1086,6 +1086,17 @@ public final class CMSettings {
         /** @hide */
         public static final Validator APP_SWITCH_WAKE_SCREEN_VALIDATOR =
                 sBooleanValidator;
+       /**
+         * Whether to swap the app switch button with the back button.
+         * 0 = 0ff, 1 = on
+         */
+         public static final String APP_SWITCH_SWAP_BUTTONS = "app_switch_swap_buttons";
+ 
+         /** @hide */
+         public static final Validator APP_SWITCH_SWAP_BUTTONS_VALIDATOR =
+                 sBooleanValidator;
+ 
+         /**
 
         /**
          * Whether to wake the screen with the camera key half-press.
