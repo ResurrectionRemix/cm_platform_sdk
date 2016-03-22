@@ -73,27 +73,4 @@
   <string name="live_display_outdoor_summary">Використовувати параметри для яскравого освітлення надворі</string>
   <string name="live_display_hint">LiveDisplay допоможе зменшити навантаження на зір та покращить Ваш сон. Натисніть тут, щоб спробувати його!</string>
   <string name="permlab_thirdPartyKeyguard">Нетиповий екран блокування</string>
-<<<<<<< HEAD
-=======
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Дозволяє використати програму як незахищене блокування екрану.</string>
-  <!-- Device specific settings -->
-  <string name="device_settings_app_name">Додаткові налаштування</string>
-  <!-- Touchscreen gestures -->
-  <string name="screen_gestures_panel_title">Жести</string>
-  <!-- Touchscreen gesture haptic feedback -->
-  <string name="touchscreen_gesture_extras">Додатково</string>
-  <string name="touchscreen_gesture_haptic_feedback">Вібро-відгук</string>
-  <string name="touchscreen_gesture_haptic_feedback_summary">Вібрувати, коли виявлено жест</string>
-  <!-- Theme installation error notification -->
-  <!-- Theme reset notification -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Performance manager permission title -->
-  <!-- Performance manager permission description -->
->>>>>>> 948e399... Automatic translation import
 </resources>
