@@ -106,7 +106,7 @@ public class ProfileManager {
      * Extra for {@link #INTENT_ACTION_PROFILE_SELECTED}:
      * The string representation of the UUID of the previously active profile
      */
-    public static final String EXTRA_LAST_PROFILE_UUID = "uuid";
+    public static final String EXTRA_LAST_PROFILE_UUID = "lastUuid";
 
     /**
      * Activity Action: Shows a profile picker.
@@ -221,6 +221,13 @@ public class ProfileManager {
             mContext = context;
         }
         sService = getService();
+
+        if (context.getPackageManager().hasSystemFeature(
+                cyanogenmod.app.CMContextConstants.Features.PROFILES) && sService == null) {
+            throw new RuntimeException("Unable to get ProfileManagerService. The service either" +
+                    " crashed, was not started, or the interface has been called to early in" +
+                    " SystemServer init");
+        }
     }
 
     /**

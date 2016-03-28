@@ -236,7 +236,12 @@ public class ThemeManagerService extends SystemService {
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_THEME_SERVICE, mService);
+        if (mContext.getPackageManager().hasSystemFeature(CMContextConstants.Features.THEMES)) {
+            publishBinderService(CMContextConstants.CM_THEME_SERVICE, mService);
+        } else {
+            Log.wtf(TAG, "Theme service started by system server but feature xml not" +
+                    " declared. Not publishing binder service!");
+        }
         // listen for wallpaper changes
         IntentFilter filter = new IntentFilter(Intent.ACTION_WALLPAPER_CHANGED);
         mContext.registerReceiver(mWallpaperChangeReceiver, filter);
@@ -245,19 +250,18 @@ public class ThemeManagerService extends SystemService {
         mContext.registerReceiver(mUserChangeReceiver, filter);
 
         mPM = mContext.getPackageManager();
-
-        if (!isThemeApiUpToDate()) {
-            Log.d(TAG, "The system has been upgraded to a theme new api, " +
-                    "checking if currently set theme is compatible");
-            removeObsoleteThemeOverlayIfExists();
-            updateThemeApi();
-        }
     }
 
     @Override
     public void onBootPhase(int phase) {
         super.onBootPhase(phase);
         if (phase == SystemService.PHASE_ACTIVITY_MANAGER_READY) {
+            if (!isThemeApiUpToDate()) {
+                Log.d(TAG, "The system has been upgraded to a theme new api, " +
+                        "checking if currently set theme is compatible");
+                removeObsoleteThemeOverlayIfExists();
+                updateThemeApi();
+            }
             registerAppsFailureReceiver();
             processInstalledThemes();
         }
@@ -303,6 +307,11 @@ public class ThemeManagerService extends SystemService {
             String component = entry.getKey();
             String pkgName = entry.getValue();
             String defaultPkg = defaults.get(component);
+
+            if (defaultPkg == null) {
+                Log.d(TAG, "Default package is null, skipping " + component);
+                continue;
+            }
 
             // Check that the default overlay theme is not currently set
             if (defaultPkg.equals(pkgName)) {
@@ -817,7 +826,8 @@ public class ThemeManagerService extends SystemService {
         Map<String, String> appOverlays = request.getPerAppOverlays();
         for (String appPkgName : appOverlays.keySet()) {
             if (appPkgName != null) {
-                builder.overlay(appPkgName, appOverlays.get(appPkgName));
+                String appOverlay = appOverlays.get(appPkgName);
+                builder.overlay(appPkgName, "default".equals(appOverlay) ? null : appOverlay);
             }
         }
 
