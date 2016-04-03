@@ -854,7 +854,6 @@ public final class CMSettings {
          * Display style of the status bar battery information
          * 0: Display the battery an icon in portrait mode
          * 2: Display the battery as a circle
-         * 3: Display the battery as a dotted circle
          * 4: Hide the battery status information
          * 5: Display the battery an icon in landscape mode
          * 6: Display the battery as plain text
@@ -864,7 +863,7 @@ public final class CMSettings {
 
         /** @hide */
         public static final Validator STATUS_BAR_BATTERY_STYLE_VALIDATOR =
-                new DiscreteValueValidator(new String[] {"0", "2", "3", "4", "5", "6"});
+                new DiscreteValueValidator(new String[] {"0", "2", "4", "5", "6"});
 
         /**
          * Status bar battery %
@@ -924,7 +923,7 @@ public final class CMSettings {
         /** @hide */
         public static final Validator NAV_BUTTONS_VALIDATOR =
                 new DelimitedListValidator(new String[] {"empty", "home", "back", "search",
-                        "recent", "menu0", "menu1", "menu2", "dpad_left", "dpad_right", "power", "notifications" , "torch" ,"camera" ,"screenshot" , "expand" ,  "configurations" ,"pie" ,"screenrecord" , "killtask", "app_picker"}, "|", true);
+                        "recent", "menu0", "menu1", "menu2", "dpad_left", "dpad_right"}, "|", true);
 
         /**
          * Volume key controls ringtone or media sound stream
@@ -1467,13 +1466,13 @@ public final class CMSettings {
 
         /**
          * Whether to allow one finger quick settings expansion on the side of the statusbar.
-         * 0 = 0ff, 1 = right, 2 = left ,3 = always
+         * 0 = 0ff, 1 = right, 2 = left
          */
         public static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
 
         /** @hide */
         public static final Validator STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
+                new InclusiveIntegerRangeValidator(0, 2);
 
         /**
          * Whether to show the brightness slider in quick settings panel.
@@ -1676,36 +1675,6 @@ public final class CMSettings {
         public static final String NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES =
                 "notification_light_pulse_custom_values";
 
-        /**
-         * Which applications to disable heads up notifications in
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_CUSTOM_VALUES = "heads_up_custom_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_CUSTOM_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * Which applications to disable heads up notifications for
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_BLACKLIST_VALUES = "heads_up_blacklist_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_BLACKLIST_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * Which applications to post all notification to heads up
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_WHITELIST_VALUES = "heads_up_whitelist_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_WHITELIST_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES_VALIDATOR =
                 new Validator() {
@@ -1782,12 +1751,14 @@ public final class CMSettings {
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR =
                 sBooleanValidator;
-                
-                
+
         /**
          * Whether or not to launch default music player when headset is connected
          */
         public static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
+
+        /** @hide */
+        public static final Validator HEADSET_CONNECT_PLAYER_VALIDATOR = sBooleanValidator;
 
         /**
          * Whether or not to vibrate when a touchscreen gesture is detected
@@ -1902,6 +1873,7 @@ public final class CMSettings {
                 CMSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
                 CMSettings.System.VOLUME_KEYS_CONTROL_RING_STREAM,
                 CMSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
+                CMSettings.System.HEADSET_CONNECT_PLAYER,
                 CMSettings.System.ZEN_ALLOW_LIGHTS,
                 CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
         };
@@ -2046,11 +2018,9 @@ public final class CMSettings {
                     NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                     NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_CUSTOM_VALUES, HEADS_UP_CUSTOM_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_BLACKLIST_VALUES, HEADS_UP_BLACKLIST_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_WHITELIST_VALUES, HEADS_UP_WHITELIST_VALUES_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_COLOR_AUTO,
                     NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR);
+            VALIDATORS.put(HEADSET_CONNECT_PLAYER, HEADSET_CONNECT_PLAYER_VALIDATOR);
             VALIDATORS.put(ZEN_ALLOW_LIGHTS, ZEN_ALLOW_LIGHTS_VALIDATOR);
             VALIDATORS.put(ZEN_PRIORITY_ALLOW_LIGHTS, ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR);
             VALIDATORS.put(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
@@ -2694,8 +2664,14 @@ public final class CMSettings {
          */
         public static final String DEFAULT_LIVE_LOCK_SCREEN_COMPONENT =
                 "default_live_lock_screen_component";
-                
-       /**        
+
+        /**
+         * Whether keyguard will direct show security view (0 = false, 1 = true)
+         * @hide
+         */
+        public static final String LOCK_PASS_TO_SECURITY_VIEW = "lock_screen_pass_to_security_view";
+
+        /**
          * Whether touch hovering is enabled on supported hardware
          * @hide
          */
@@ -2773,6 +2749,7 @@ public final class CMSettings {
                 CMSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED,
                 CMSettings.Secure.QS_LOCATION_ADVANCED,
                 CMSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
+                CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW
         };
 
         /**

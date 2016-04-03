@@ -826,8 +826,7 @@ public class ThemeManagerService extends SystemService {
         Map<String, String> appOverlays = request.getPerAppOverlays();
         for (String appPkgName : appOverlays.keySet()) {
             if (appPkgName != null) {
-                String appOverlay = appOverlays.get(appPkgName);
-                builder.overlay(appPkgName, "default".equals(appOverlay) ? null : appOverlay);
+                builder.overlay(appPkgName, appOverlays.get(appPkgName));
             }
         }
 
