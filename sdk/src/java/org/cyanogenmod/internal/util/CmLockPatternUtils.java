@@ -25,7 +25,6 @@ import android.text.TextUtils;
 import com.android.internal.widget.LockPatternUtils;
 
 import cyanogenmod.platform.Manifest;
-import cyanogenmod.providers.CMSettings;
 
 public class CmLockPatternUtils extends LockPatternUtils {
 
@@ -94,13 +93,5 @@ public class CmLockPatternUtils extends LockPatternUtils {
 
     private int getCurrentUser() {
         return UserHandle.USER_CURRENT;
-    }
-
-    public boolean shouldPassToSecurityView(int userId) {
-        return getBoolean(CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
-    }
-
-    public void setPassToSecurityView(boolean enabled, int userId) {
-        setBoolean(CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
     }
 }
