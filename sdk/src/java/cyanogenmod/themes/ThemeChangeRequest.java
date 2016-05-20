@@ -49,6 +49,10 @@ public final class ThemeChangeRequest implements Parcelable {
         return getThemePackageNameForComponent(MODIFIES_NAVIGATION_BAR);
     }
 
+    public String getHeadersThemePackageName() {
+        return getThemePackageNameForComponent(MODIFIES_STATUSBAR_HEADERS);
+    }
+
     public String getFontThemePackageName() {
         return getThemePackageNameForComponent(MODIFIES_FONTS);
     }
@@ -220,6 +224,10 @@ public final class ThemeChangeRequest implements Parcelable {
             return setComponent(MODIFIES_NAVIGATION_BAR, pkgName);
         }
 
+        public Builder setHeaders(String pkgName) {
+            return setComponent(MODIFIES_STATUSBAR_HEADERS, pkgName);
+        }
+
         public Builder setFont(String pkgName) {
             return setComponent(MODIFIES_FONTS, pkgName);
         }
@@ -308,6 +316,9 @@ public final class ThemeChangeRequest implements Parcelable {
             }
             if (themeConfig.getOverlayForNavBar() != null) {
                 this.setNavBar(themeConfig.getOverlayForNavBar());
+            }
+            if (themeConfig.getOverlayForHeaders() != null) {
+                this.setHeaders(themeConfig.getOverlayForHeaders());
             }
 
             // Check if there are any per-app overlays using this theme
