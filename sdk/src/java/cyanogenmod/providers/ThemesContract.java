@@ -214,6 +214,7 @@ public class ThemesContract {
          * 1 if theme has an overlay for SystemUI/StatusBar headers
          * <P>Type: INTEGER</P>
          * <P>Default: 0</P>
+         *@hide
          */
         public static final String MODIFIES_STATUSBAR_HEADERS = "mods_statusbar_headers";
 
@@ -352,6 +353,9 @@ public class ThemesContract {
         public static final String KEY_OVERLAYS = "mixnmatch_overlays";
         public static final String KEY_NAVIGATION_BAR = "mixnmatch_navigation_bar";
         public static final String KEY_LIVE_LOCK_SCREEN = "mixnmatch_live_lock_screen";
+        /**
+        *@hide
+        */
         public static final String KEY_STATUSBAR_HEADERS = "mixnmatch_statusbar_headers";
 
         public static final String[] ROWS = { KEY_HOMESCREEN,
@@ -702,20 +706,23 @@ public class ThemesContract {
         public static final String LIVE_LOCK_SCREEN_THUMBNAIL = "live_lock_screen_thumbnail";
 
         /**
-         * Cached image of statusbar headers
+         * Cached image of statusbar headers]
          * <P>Type: String (file path)</P>
+         *@hide
          */
         public static final String HEADER_PREVIEW_1 = "headers_preview_1";
 
         /**
          * Cached image of statusbar headers
          * <P>Type: String (file path)</P>
+         *@hide
          */
         public static final String HEADER_PREVIEW_2 = "headers_preview_2";
 
         /**
          * Cached image of statusbar headers
          * <P>Type: String (file path)</P>
+         *@hide
          */
         public static final String HEADER_PREVIEW_3 = "headers_preview_3";
 

@@ -49,6 +49,9 @@ public final class ThemeChangeRequest implements Parcelable {
         return getThemePackageNameForComponent(MODIFIES_NAVIGATION_BAR);
     }
 
+    /**
+    *@hide
+    **/
     public String getHeadersThemePackageName() {
         return getThemePackageNameForComponent(MODIFIES_STATUSBAR_HEADERS);
     }
@@ -224,6 +227,9 @@ public final class ThemeChangeRequest implements Parcelable {
             return setComponent(MODIFIES_NAVIGATION_BAR, pkgName);
         }
 
+       /**
+        *@hide
+        */
         public Builder setHeaders(String pkgName) {
             return setComponent(MODIFIES_STATUSBAR_HEADERS, pkgName);
         }
