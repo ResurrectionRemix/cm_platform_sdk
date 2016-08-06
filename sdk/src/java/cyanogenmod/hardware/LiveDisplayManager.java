@@ -20,11 +20,6 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.util.Log;
-import android.util.Range;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import cyanogenmod.app.CMContextConstants;
 
@@ -114,21 +109,10 @@ public class LiveDisplayManager {
      */
     public static final int FEATURE_COLOR_BALANCE = 16;
 
-    /**
-     * System supports manual hue/saturation/intensity/contrast
-     * adjustment of display.
-     */
-    public static final int FEATURE_PICTURE_ADJUSTMENT = 17;
-
-    public static final int ADJUSTMENT_HUE = 0;
-    public static final int ADJUSTMENT_SATURATION = 1;
-    public static final int ADJUSTMENT_INTENSITY = 2;
-    public static final int ADJUSTMENT_CONTRAST = 3;
-
     /** @hide */
     public static final int FEATURE_FIRST = FEATURE_CABC;
     /** @hide */
-    public static final int FEATURE_LAST = FEATURE_PICTURE_ADJUSTMENT;
+    public static final int FEATURE_LAST = FEATURE_COLOR_BALANCE;
 
     private static final String TAG = "LiveDisplay";
 
@@ -437,33 +421,5 @@ public class LiveDisplayManager {
         } catch (RemoteException e) {
             return false;
         }
-    }
-
-    public HSIC getPictureAdjustment() {
-        try {
-            if (checkService()) {
-                return sService.getPictureAdjustment();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    public boolean setPictureAdjustment(final HSIC hsic) {
-        try {
-            return checkService() && sService.setPictureAdjustment(hsic);
-        } catch (RemoteException e) {
-        }
-        return false;
-    }
-
-    public HSIC getDefaultPictureAdjustment() {
-        try {
-            if (checkService()) {
-                return sService.getDefaultPictureAdjustment();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
     }
 }

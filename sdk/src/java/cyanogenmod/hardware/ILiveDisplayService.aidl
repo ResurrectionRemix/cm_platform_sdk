@@ -16,7 +16,6 @@
 
 package cyanogenmod.hardware;
 
-import cyanogenmod.hardware.HSIC;
 import cyanogenmod.hardware.LiveDisplayConfig;
 
 /** @hide */
@@ -48,8 +47,4 @@ interface ILiveDisplayService {
 
     boolean isAutomaticOutdoorModeEnabled();
     boolean setAutomaticOutdoorModeEnabled(boolean enabled);
-
-    HSIC getPictureAdjustment();
-    HSIC getDefaultPictureAdjustment();
-    boolean setPictureAdjustment(in HSIC adj);
 }
