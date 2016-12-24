@@ -903,7 +903,7 @@ public final class CMSettings {
 
         /** @hide */
         public static final Validator STATUS_BAR_BATTERY_STYLE_VALIDATOR =
-                new DiscreteValueValidator(new String[] {"0", "2", "4", "5", "6"});
+                new DiscreteValueValidator(new String[] {"0", "2", "4", "5", "6", "7"});
 
         /**
          * Status bar battery %
