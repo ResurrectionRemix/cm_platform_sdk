@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for the LineageOS system components when they are shown to the user. -->
-    <string name="cyanogenmod_system_label">LineageOS System</string>
+    <string name="cyanogenmod_system_title">OS System</string>
 
     <string name="permlab_publishCustomTile">create a custom tile within quick settings panel</string>
     <string name="permdesc_publishCustomTile">Allows an app to publish a quick settings tile.</string>
