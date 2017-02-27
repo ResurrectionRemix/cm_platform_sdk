@@ -2599,7 +2599,9 @@ public final class CMSettings {
         /**
          * Whether the global stats collection setting has been successfully reported to server
          * @hide
+         * @deprecated {@link org.cyanogenmod.cmparts.cmstats.AnonymousStats} no longer uses this
          */
+        @Deprecated
         public static final String STATS_COLLECTION_REPORTED = "stats_collection_reported";
 
         /**
@@ -2808,8 +2810,11 @@ public final class CMSettings {
          * Set to 0 when we enter the CM Setup Wizard.
          * Set to 1 when we exit the CM Setup Wizard.
          *
+         * @deprecated Use {@link Secure#USER_SETUP_COMPLETE} or
+         *             {@link Settings.Global#DEVICE_PROVISIONED} instead
          * @hide
          */
+        @Deprecated
         public static final String CM_SETUP_WIZARD_COMPLETED = "cm_setup_wizard_completed";
 
         /**
